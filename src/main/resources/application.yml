@@ -1,0 +1,14 @@
+spring:
+  config:
+    import: security-variables.yml
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/camping_skhoct30
+    username: root
+    password: ${mysql.password}
+  thymeleaf:
+    cache: false
+  application:
+    name: Camping
+mybatis:
+  mapper-locations: mapper/*Mapper.xml
