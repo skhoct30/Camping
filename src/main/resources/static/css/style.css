@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+
+#wrap {
+	width:1200px;
+	height:1000px;
+	margin:0 auto;
+}
+
+
+header {
+	height:100px;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.main-font {
+	font-size: 30px;
+	font-family: Belleza;
+}
+
+
+
+
+.main-typo {
+	height:500px;
+	font-size: 40px;
+}
+
+
+.sub-nav {
+	height:100px;
+}
