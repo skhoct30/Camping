@@ -81,7 +81,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     position: sticky; /* 스크롤 시 상단 고정 */
     top: 0;
-    z-index: 1000; /* 다른 요소 위에 오도록 */
+    z-index: 1050; /* 다른 요소 위에 오도록 */
 }
 
 .main-font {
@@ -220,7 +220,7 @@ header {
 
 /* 푸터 */
 footer {
-    background-color: #343a40; /* 어두운 푸터 배경 */
+    background-color: #343a40; /* 어두운 푸터 배경 343a40 */
     color: #f8f9fa;
     padding: 50px 0;
     font-size: 0.9rem;
