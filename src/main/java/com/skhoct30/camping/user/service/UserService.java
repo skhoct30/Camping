@@ -3,6 +3,7 @@ package com.skhoct30.camping.user.service;
 import org.springframework.stereotype.Service;
 
 import com.skhoct30.camping.common.MD5HashingEncoder;
+import com.skhoct30.camping.user.domain.User;
 import com.skhoct30.camping.user.repository.UserRepository;
 
 @Service
@@ -64,7 +65,15 @@ public class UserService {
 	}
 	
 	
+	// 로그인을 위한 api
 	
+	public User getUser(String loginId, String password) {
+		
+		String hashingPassword = MD5HashingEncoder.encode(password);
+		
+		return userRepository.selectUser(loginId, hashingPassword);
+	
+	}
 	
 	
 	

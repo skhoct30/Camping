@@ -1,5 +1,6 @@
 package com.skhoct30.camping.user;
 
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,7 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.skhoct30.camping.user.domain.User;
 import com.skhoct30.camping.user.service.UserService;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/user")
@@ -62,6 +67,35 @@ public class UserRestController {
 		return resultMap;
 		
 		
+	}
+	
+	
+	// 로그인을 위한 API
+	
+	@PostMapping("/login")
+	public Map<String, String> login(
+			@RequestParam String loginId
+			, @RequestParam String password
+			, HttpSession session) {
+		
+		User user = userService.getUser(loginId, password);
+		
+		Map<String, String> resultMap = new HashMap<>();
+		
+		if(user != null) {
+			resultMap.put("result", "success");
+			
+			session.setAttribute("userId", user.getId());
+			session.setAttribute("userId", user.getLoginId());
+			session.setAttribute("userId", user.getName());
+			session.setAttribute("userId", user.getPhoneNumber());
+			
+			
+		} else {
+			resultMap.put("result", "fail");
+		}
+		
+		return resultMap;
 	}
 	
 	

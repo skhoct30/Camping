@@ -15,17 +15,47 @@
  			`loginId`
  			, `password`
  			, `name`
- 			, `email`
+ 			, `phoneNumber`
  		)
  		VALUE
  		(
  			#{loginId}
  			, #{password}
  			, #{name}
- 			, #{email}
+ 			, #{phoneNumber}
  		)
  	
  	</insert>
+ 	
+ 	
+ 	<select id="selectCountByLoginId" parameterType="string"
+ 	resultType="int">
+ 	
+ 		SELECT
+ 			count(*)
+ 		FROM
+ 			`user`
+ 		WHERE
+ 			`loginId` = #{loginId}
+ 	
+ 	</select>
+ 	
+ 	<!-- 로그인을 위한 xml -->
+ 	<select id="selectUser" parameterType="map" resultType="com.skhoct30.camping.user.domain.User">
+ 	
+ 		SELECT
+ 			`id`
+ 			, `loginId`
+ 			, `password`
+ 			, `name
+ 			, `phoneNumber`
+ 		FROM
+ 			`user`
+ 		WHERE
+ 			`loginId` = #{loginId}
+ 			AND `password` = #{password}
+ 	
+ 	</select>
  
  
  

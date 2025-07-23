@@ -21,7 +21,7 @@
 			<div id="availableText" class="small text-success d-none">사용 가능한 아이디 입니다.</div>
 			
 			
-			<input type="password" class="form-control mt-5" id="passwordInput" placeholder="비밀번호">
+			<input type="password" class="form-control mt-4" id="passwordInput" placeholder="비밀번호">
 			<input type="password" class="form-control mt-4" id="passwordConfirmInput" placeholder="비밀번호 확인">
 			<input type="text" class="form-control mt-4" id="nameInput" placeholder="성명">
 			<input type="text" class="form-control mt-4" id="phoneNumberInput" placeholder="사용자 전화번호">
@@ -74,9 +74,9 @@
 			
 			$.ajax({
 				type:"get"
-				, url:"user/duplicate-id"
+				, url:"/user/duplicate-id"
 				, data:{"loginId":id}
-				, success:function(rereponse) {
+				, success:function(response) {
 					checkDuplicate = true;
 					
 					isDuplicateId = response.isDuplicate;

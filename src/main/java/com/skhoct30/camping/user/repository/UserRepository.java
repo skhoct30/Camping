@@ -3,6 +3,8 @@ package com.skhoct30.camping.user.repository;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import com.skhoct30.camping.user.domain.User;
+
 @Mapper
 public interface UserRepository {
 
@@ -16,5 +18,10 @@ public interface UserRepository {
 	
 	
 	public int selectCountByLoginId(@Param("loginId") String loginId);
+	
+	
+	public User selectUser(
+			@Param("loginId") String loginId
+			, @Param("password") String password);
 	
 }

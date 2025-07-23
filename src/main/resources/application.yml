@@ -13,4 +13,4 @@ spring:
   application:
     name: Camping
 mybatis:
-  mapper-locations: mapper/*Mapper.xml
+  mapper-locations: mappers/*Mapper.xml
