@@ -17,13 +17,13 @@ public class MainController {
 	}
 	
 	
-	@GetMapping("/join")
-	public String mainJoinView() {
-		return "main/join";
-	}
-	
-	@GetMapping("/adminJoin")
-	public String mainAdminJoinView() {
-		return "main/adminJoin";
-	}
+//	@GetMapping("/join")
+//	public String mainJoinView() {
+//		return "main/join";
+//	}
+//	
+//	@GetMapping("/adminJoin")
+//	public String mainAdminJoinView() {
+//		return "main/adminJoin";
+//	}
 }
