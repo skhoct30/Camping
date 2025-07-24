@@ -46,29 +46,24 @@
 		// 아이디 중복 여부 관리 변수
 		var isDuplicateId = true;
 	
-	
-	
-	
-	
-		$("#idInput").on("input", function() {
-			// 입력내용이 바꼈을 때 ?
-			// 중복확인 과정 초기화
-			// 중복확인을 하지 않은 상태로 돌려놓기 초기화 하기
+
+		$("#idInput").on("input", function(){
 			checkDuplicate = false;
 			isDuplicateId = true;
 			
 			$("#duplicateText").addClass("d-none");
 			$("#availableText").addClass("d-none");
+			
 		})
 	
 	
 	
 	
 		$("#duplicateBtn").on("click", function(){
-			let id = $("#idInput").val();
+			let id = $("#idInput").val().trim();
 			
 			if(id == "") {
-				alert("아이디를 입력해주세요.");
+				alert("아이디를 입력해주세요.!!!");
 				return;
 			}
 			
@@ -109,7 +104,7 @@
 	
 		$("#joinBtn").on("click", function(){
 			
-			let id = $("#idInput").val();
+			let id = $("#idInput").val().trim();
 			let password = $("#passwordInput").val();
 			let passwordConfirmInput = $("#passwordConfirmInput").val();
 			let name = $("#nameInput").val();
