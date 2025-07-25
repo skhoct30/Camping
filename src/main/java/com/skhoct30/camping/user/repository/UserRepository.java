@@ -16,7 +16,7 @@ public interface UserRepository {
 			, @Param("name") String name
 			, @Param("phoneNumber") String phoneNumber);
 	
-	
+	// 아이디 중복확인
 	public int selectCountByLoginId(@Param("loginId") String loginId);
 	
 	

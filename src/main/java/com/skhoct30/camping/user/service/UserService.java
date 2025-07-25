@@ -45,24 +45,24 @@ public class UserService {
 	}
 	
 	
-	// 아이디 중복 확인
-	
-	public boolean isDuplicateId(String loginId) {
+		// 아이디 중복 확인
 		
-		// 중복되는 행이 있는 지 없는지 count 쿼리로 확인할 것.
-		
-		
-		int count =  userRepository.selectCountByLoginId(loginId);
-		
-		if(count == 1) {
-			return true;
+		public boolean isDuplicateId(String loginId) {
 			
-		} else {
-			return false;
+			// 중복되는 행이 있는 지 없는지 count 쿼리로 확인할 것.
+			
+			
+			int count =  userRepository.selectCountByLoginId(loginId);
+			
+			if(count == 1) {
+				return true;
+				
+			} else {
+				return false;
+			}
+			
+			
 		}
-		
-		
-	}
 	
 	
 	// 로그인을 위한 api

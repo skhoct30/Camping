@@ -74,9 +74,9 @@
 				, success:function(response) {
 					checkDuplicate = true;
 					
-					isDuplicateId = response.isDuplicate;
+					isDuplicateId = response.result;
 					
-					if(response.isDuplicate) {
+					if(response.result) {
 						// 중복됨
 						$("#duplicateText").removeClass("d-none");
 						$("#availableText").addClass("d-none");

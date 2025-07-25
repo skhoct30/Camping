@@ -86,9 +86,9 @@ public class UserRestController {
 			resultMap.put("result", "success");
 			
 			session.setAttribute("userId", user.getId());
-			session.setAttribute("userId", user.getLoginId());
-			session.setAttribute("userId", user.getName());
-			session.setAttribute("userId", user.getPhoneNumber());
+			session.setAttribute("userLoinId", user.getLoginId());
+			session.setAttribute("userName", user.getName());
+			session.setAttribute("userPhoneNumber", user.getPhoneNumber());
 			
 			
 		} else {

@@ -36,7 +36,7 @@
  		FROM
  			`user`
  		WHERE
- 			`loginId` = #{loginId}
+ 			LOWER(`loginId`) = LOWER(#{loginId})
  	
  	</select>
  	
