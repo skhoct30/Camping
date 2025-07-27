@@ -47,7 +47,7 @@
  			`id`
  			, `loginId`
  			, `password`
- 			, `name
+ 			, `name`
  			, `phoneNumber`
  		FROM
  			`user`
