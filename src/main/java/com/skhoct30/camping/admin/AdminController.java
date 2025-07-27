@@ -1,19 +1,17 @@
-package com.skhoct30.camping.user;
+package com.skhoct30.camping.admin;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+@RequestMapping("/admin")
 @Controller
-@RequestMapping("/user")
-public class UserController {
+public class AdminController {
 
 	
 	@GetMapping("/join")
-	public String mainJoinView() {
-		return "user/join";
+	public String mainAdminJoinView() {
+		return "user/adminJoin";
 	}
-	
-
 	
 }
