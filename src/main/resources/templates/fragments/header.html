@@ -11,37 +11,50 @@
             </ul>
         </div>
 
-        <div class="header-icons mr-3 mr-md-4 small d-flex align-items-center">
-            <i class="bi bi-search mr-3"></i>
-            <span class="mr-2" data-toggle="modal" data-target="#loginModal">로그인</span>
-            <a href="/user/logout" class="d-none">로그아웃</a> <!-- 실제 로그아웃 링크 -->
-            <i class="bi bi-chevron-compact-down"></i>
-        </div>
-  
-		<!-- 로그인 Modal -->
-		<div class="modal fade text-center" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		  <div class="modal-dialog modal-dialog-centered" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h3 class="modal-titl" id="exampleModalLongTitle">로그인</h3>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <form id="loginForm">
-			      <div class="modal-body">
-			      	<h3 style="font-family: 'Georgia', serif;" class="mt-3">Welcome</h3>
-			        <input type="text" class="form-control mt-4" placeholder="아이디를 입력하세요" id="logidInput">
-			        <input type="password" class="form-control mt-3" placeholder="비밀번호를 입력하세요" id="loginpasswordInput">
-					<button type="submit" class="btn btn-primary mt-3 col-12 mb-5" id="loginBtn">로그인</button>
-			      </div>
-		      </form>
-		      <div class="modal-footer d-flex justify-content-between mt-2">
-		        <span><a href="/user/join">회원가입</a></span>
-		        <span><a href="/admin/join">관리자가입</a></span>
-		      </div>
+		<div class="header-icons mr-3 mr-md-4 small d-flex align-items-center">
+		    <i class="bi bi-search mr-3"></i>
+		
+		    <div th:if="${session.userId != null}" class="d-flex align-items-center">
+		        <span th:text="${session.userName}" class="mr-2"></span> <a href="/user/logout" class="mr-2 ml-2" id="logoutText">로그아웃</a>
 		    </div>
-		  </div>
+		
+		    <div th:unless="${session.userId != null}" class="d-flex align-items-center">
+		        <span class="mr-2 ml-2" data-toggle="modal" data-target="#loginModal" id="loginText">로그인</span>
+		    </div>
+		    
+		    <i class="bi bi-chevron-compact-down"></i>
+		</div>
+		
+		<div class="modal fade text-center" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		    <div class="modal-dialog modal-dialog-centered" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <h3 class="modal-titl" id="exampleModalLongTitle">로그인</h3>
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		            </div>
+		            <form id="loginForm">
+		                <div class="modal-body">
+		                    <h3 style="font-family: 'Georgia', serif;" class="mt-3">Welcome</h3>
+		                    <input type="text" class="form-control mt-4" placeholder="아이디를 입력하세요" id="logidInput">
+		                    <input type="password" class="form-control mt-3" placeholder="비밀번호를 입력하세요" id="loginpasswordInput">
+		                    <button type="submit" class="btn btn-primary mt-3 col-12" id="loginBtn">로그인</button>
+		                </div>
+		            </form>
+		            <form id="adminLoginForm">
+		                <div class="modal-body">
+		                    <input type="text" class="form-control mt-4" placeholder="아이디를 입력하세요" id="adminLogidInput">
+		                    <input type="password" class="form-control mt-3" placeholder="비밀번호를 입력하세요" id="adminLoginpasswordInput">
+		                    <button type="submit" class="btn btn-success mt-3 col-12 mb-5" id="adminLoginBtn">관리자 로그인</button>
+		                </div>
+		            </form>
+		            <div class="modal-footer d-flex justify-content-between mt-2">
+		                <span><a href="/user/join">회원가입</a></span>
+		                <span><a href="/admin/join">관리자가입</a></span>
+		            </div>
+		        </div>
+		    </div>
 		</div>
 
     </header>
