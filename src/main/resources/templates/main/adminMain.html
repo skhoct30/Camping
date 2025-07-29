@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/default}">
+
+	<section layout:fragment="contents" class="contents">
+
+
+		
+		    <!-- 메인 배너 섹션  -->
+		    <div class="hero-section">
+		        <div class="hero-content">
+					<h1 class="hero-title mt-3">나만의 힐링, 특별한 하루</h1>
+		            <p class="hero-subtitle">Having to blue</p>
+		        </div>
+		    </div>
+		
+			<div class="container-fluid py-5 sub-content-menu d-flex align-items-center justify-content-center ">
+	            <div class="col-5 text-center">
+	                <a href="/admin/create" class="btn btn-info btn-lg rounded-pill px-5 py-2 shadow-sm d-flex align-items-center justify-content-center mx-auto" >
+	                    <span class="text-white font-weight-bold">캠핑장 추가하기</span>
+	                </a>
+	            </div>
+		    </div>
+		
+		    <!-- 관리자 페이지 -->
+		    <section class="container py-5">
+		    
+				<div class="text-center mb-5">
+				    <h1 class="font-weight-bold">MD PAGE</h1>
+				    <p class="text-muted">한 눈으로 볼 수 있는 관리 페이지</p>
+				</div>
+				
+				<div class="p-2">
+					<h3>캠핑장 리스트</h3>
+				</div>
+				
+				<table class="table text-center">
+					<thead>
+						<tr>
+							<th>지역</th>
+							<th>캠핑장명</th>
+							<th>타입</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>가평</td>
+							<td>펫밀리 애견글램핑</td>
+							<td>글램핑/카라반</td>
+							<td>
+								<button type="button" class="btn btn-sm btn-success mr-3">수정</button>
+								<button type="button" class="btn btn-sm btn-warning mr-3">객실추가</button>
+								<button type="button" class="btn btn-sm btn-danger">삭제</button>
+							</td>
+						</tr>
+						<tr>
+							<td>가평</td>
+							<td>블루밍 글램핑</td>
+							<td>글램핑/카라반</td>
+							<td>
+								<button type="button" class="btn btn-sm btn-success mr-3">수정</button>
+								<button type="button" class="btn btn-sm btn-warning mr-3">객실추가</button>
+								<button type="button" class="btn btn-sm btn-danger">삭제</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				
+				<div class="p-2 mt-5">
+					<h3>예약 리스트</h3>
+				</div>
+				
+				<table class="table text-center">
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>예약자 명</th>
+							<th>숙박일자</th>
+							<th>캠핑장 명</th>
+							<th>객실 명</th>
+							<th>인원수</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2</td>
+							<td>황형구</td>
+							<td>25/08/03 ~ 25/08/05</td>
+							<td>펫밀리 애견글램핑</td>
+							<td>펫밀리 글램핑</td>
+							<td>3인</td>
+							<td>
+								<button type="button" class="btn btn-sm btn-danger">삭제</button>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>곽두팔</td>
+							<td>25/08/15 ~ 25/08/16</td>
+							<td>블루밍 글램핑</td>
+							<td>글램핑A동</td>
+							<td>2인</td>
+							<td>
+								<button type="button" class="btn btn-sm btn-danger">삭제</button>
+							</td>
+						</tr>						
+
+					</tbody>
+				</table>
+				
+				
+				
+				<div class="p-2 mt-5">
+					<h3>리뷰 리스트</h3>
+				</div>
+				
+				<table class="table text-center">
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>제목</th>
+							<th>글쓴이</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2</td>
+							<td>가족들과 행복하게 잘 놀다 왔어요!</td>
+							<td>곽두팔</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>오랜만에 제대로 힐링하고 온 기분이네요!!</td>
+							<td>노홍철</td>
+						</tr>						
+					</tbody>
+				</table>
+		     
+
+		        
+		        
+		        
+		
+
+		    </section>
+		
+
+		
+
+	</section>
+	
+	<script layout:fragment="script">
+	
+	
+
+		
+		
+		
+		
+	
+	</script>
+
+
+</html>

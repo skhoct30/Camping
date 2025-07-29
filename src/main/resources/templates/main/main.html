@@ -6,8 +6,7 @@
 
 	<section layout:fragment="contents" class="contents">
 
-		    <!-- 메인 상단 콘텐츠 (Header) -->
-		
+
 		
 		    <!-- 메인 배너 섹션  -->
 		    <div class="hero-section">
@@ -125,7 +124,7 @@
 	<script layout:fragment="script">
 	
 	
-		$(document).ready(function(){
+
 			
 			$("#loginForm").on("submit", function(e){
 				// form 태그의 원래 기능을 지워야한다.
@@ -162,10 +161,9 @@
 				})
 			
 			})
-	
-		})
+
 		
-		$(document).ready(function(){
+
 			
 			$("#adminLoginForm").on("submit", function(e){
 				// form 태그의 원래 기능을 지워야한다.
@@ -191,7 +189,7 @@
 					, success:function(response) {
 						if(response.result == "success") {
 
-							location.href = "/main/view"
+							location.href = "/admin/main/view"
 						} else {
 							alert("아이디, 비밀번호를 확인해주세요!");
 						}
@@ -202,8 +200,6 @@
 				})
 			
 			})
-	
-		})
 		
 		
 		

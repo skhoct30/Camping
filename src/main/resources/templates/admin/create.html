@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/default}">
+
+	<section layout:fragment="contents" class="contents">
+
+
+		
+		    <!-- 메인 배너 섹션  -->
+		    <div class="hero-section">
+		        <div class="hero-content">
+					<h1 class="hero-title mt-3">나만의 힐링, 특별한 하루</h1>
+		            <p class="hero-subtitle">Having to blue</p>
+		        </div>
+		    </div>
+		
+		
+		    <!-- 캠핑장 추가하는 페이지 -->
+		    <section class="container py-5">
+		    
+				<div class="text-center mb-5">
+				    <h1 class="font-weight-bold">캠핑장 추가</h1>
+				    <p class="text-muted">한 눈으로 볼 수 있는 관리 페이지</p>
+				</div>
+
+				<div class="">
+					<div class="d-flex d-flex align-items-center">
+					    <span class="col-2 ml-4">캠핑장 이름 :</span><input type="text" class="form-control" placeholder="아이디를 입력하세요" id="logidInput">
+				    </div>
+				    <input type="password" class="form-control mt-3" placeholder="비밀번호를 입력하세요" id="loginpasswordInput">
+				    <button type="submit" class="btn btn-primary mt-3 col-12" id="loginBtn">로그인</button>
+				</div>				
+		    </section>
+		
+
+		
+
+	</section>
+	
+	<script layout:fragment="script">
+	
+	
+
+		
+		
+		
+		
+	
+	</script>
+
+
+</html>

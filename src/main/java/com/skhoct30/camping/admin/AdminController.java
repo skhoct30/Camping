@@ -29,4 +29,25 @@ public class AdminController {
 		
 		return "redirect:/main/view";
 	}
+	
+	// 관리자 메인홈
+	@GetMapping("/main/view")
+	public String adminMainView() {
+		return "main/adminMain";
+	}
+	
+	
+	//캠핑장 추가하는 페이지
+	
+	
+	@GetMapping("/create")
+	public String createCamping() {
+		return "admin/create";
+	}
+	
+	
+	
+	
+	
+	
 }
