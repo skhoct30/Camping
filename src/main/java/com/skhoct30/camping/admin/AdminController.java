@@ -37,13 +37,7 @@ public class AdminController {
 	}
 	
 	
-	//캠핑장 추가하는 페이지
-	
-	
-	@GetMapping("/create")
-	public String createCamping() {
-		return "admin/create";
-	}
+
 	
 	
 	
